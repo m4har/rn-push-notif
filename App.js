@@ -1,6 +1,7 @@
 import React,{useEffect, useCallback} from 'react'
 import {View, Button} from 'react-native'
 import PushNotification from 'react-native-push-notification'
+import PushNotificationIOS from '@react-native-community/push-notification-ios'
 
 const App = () => {
   useEffect(()=>{
@@ -17,7 +18,7 @@ const App = () => {
         // process the notification
     
         // required on iOS only (see fetchCompletionHandler docs: https://github.com/react-native-community/react-native-push-notification-ios)
-        // notification.finish(PushNotificationIOS.FetchResult.NoData);
+        notification.finish(PushNotificationIOS.FetchResult.NoData);
       },
     
       // ANDROID ONLY: GCM or FCM Sender ID (product_number) (optional - not required for local notifications, but is need to receive remote push notifications)
