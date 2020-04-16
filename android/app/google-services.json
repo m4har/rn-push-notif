@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "781328842893",
+    "firebase_url": "https://ughh-68a2b.firebaseio.com",
+    "project_id": "ughh-68a2b",
+    "storage_bucket": "ughh-68a2b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781328842893:android:f7e5633730689b6d8762c4",
+        "android_client_info": {
+          "package_name": "com.notifv6"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781328842893-khrl4hdm2equ44khg6sk3rqvl5h4ipt2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3rukPR6h8VTBMvnPS4edar_-50w8Kl-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "781328842893-khrl4hdm2equ44khg6sk3rqvl5h4ipt2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
