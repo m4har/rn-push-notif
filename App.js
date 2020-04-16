@@ -14,11 +14,12 @@ const App = () => {
       // (required) Called when a remote or local notification is opened or received
       onNotification: function(notification) {
         console.log("NOTIFICATION:", notification);
-    
         // process the notification
-    
+        
         // required on iOS only (see fetchCompletionHandler docs: https://github.com/react-native-community/react-native-push-notification-ios)
         notification.finish(PushNotificationIOS.FetchResult.NoData);
+        // clear from action
+        PushNotification.cancelLocalNotifications({id:notification.id.toString()})
       },
     
       // ANDROID ONLY: GCM or FCM Sender ID (product_number) (optional - not required for local notifications, but is need to receive remote push notifications)
@@ -46,11 +47,19 @@ const App = () => {
   },[])
   const onClickNotif = useCallback(()=>{
     PushNotification.localNotification({
-      title:'promo',
-      subText:'murah murah',
-      message:'123',
-      color:'red',
-      actions:`['OK','NO']`
+      autoCancel: true,
+      bigText: "My big text that will be shown when notification is expanded",
+      subText: "This is a subText",
+      color: "green",
+      vibrate: true,
+      vibration: 300,
+      tag:'isTag',
+      group:'isGroup',
+      title: "Notification Title",
+      message: "Notification Message",
+      playSound: true,
+      soundName: 'default',
+      actions: '["Accept", "Reject"]',
     })
   },[false])
 
